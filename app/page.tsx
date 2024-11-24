@@ -1,5 +1,6 @@
 "use client";
 
+import Card from "@/components/ui/card";
 import dynamic from "next/dynamic";
 
 // Dynamic import WaterWaveWrapper to ensure it's only used in the client-side environment
@@ -18,7 +19,7 @@ export default function Home() {
     >
       {() => (
         <div className="pb-8">
-          home
+          <Card className="w-26">Cool</Card>
         </div>
       )}
     </WaterWaveWrapper>

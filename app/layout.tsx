@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Oswald } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import { cn } from "./lib/utils";
-import GrainEffect from "../components/visualEffects/grain-effect";
-import Cursor from "../components/cursor/cursor";
+import { cn } from "@/lib/utils";
+import GrainEffect from "@/components/visualEffects/grain-effect";
+import Cursor from "@/components/cursor/cursor";
 
 //Fonts
 const MainFont = Bricolage_Grotesque({ subsets: ["latin"] });
