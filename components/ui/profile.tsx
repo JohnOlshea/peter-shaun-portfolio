@@ -7,7 +7,7 @@ export default function Profile() {
       <div className="relative w-[100px] h-[100px] rounded-full flex items-center justify-center bg-gradient-to-r from-blue-joust to-green-benzol">
         <Image
           src={MyImage}
-          alt="Mohamed hajji photo"
+          alt="Peter shaun photo"
           className="w-[95px] h-[95px] border-[0.2vw] border-blue-cosmos rounded-full object-cover"
         />
         {/*Online*/}
