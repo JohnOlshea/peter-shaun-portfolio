@@ -1,7 +1,26 @@
+"use client";
+
+import dynamic from "next/dynamic";
+
+// Dynamic import WaterWaveWrapper to ensure it's only used in the client-side environment
+const WaterWaveWrapper = dynamic(
+  () => import("@/components/visualEffects/water-wave-wrapper"),
+  { ssr: false }
+);
+
 export default function Home() {
   return (
-    <div className="font-oswald">
-      Hello there
-    </div>
+    <WaterWaveWrapper
+      imageUrl=""
+      dropRadius="3"
+      perturbance="3"
+      resolution="2048"
+    >
+      {() => (
+        <div className="pb-8">
+          home
+        </div>
+      )}
+    </WaterWaveWrapper>
   );
 }
