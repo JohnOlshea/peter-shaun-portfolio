@@ -1,3 +1,5 @@
 import featuredData from "./featured";
+import { galleryImages } from "./gallery";
+import { stackData } from "./stack";
 
-export { featuredData };
+export { featuredData, galleryImages, stackData };

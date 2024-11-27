@@ -1,5 +1,6 @@
 "use client";
 
+import AboutSection from "@/sections/about";
 import FeaturedSection from "@/sections/featured";
 import LandingSection from "@/sections/landing";
 // import dynamic from "next/dynamic";
@@ -22,6 +23,7 @@ export default function Home() {
         <div className="pb-8">
           <LandingSection />
           <FeaturedSection />
+          <AboutSection />
           </div>
     //   )}
     // </WaterWaveWrapper>
