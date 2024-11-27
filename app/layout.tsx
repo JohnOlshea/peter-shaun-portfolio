@@ -16,8 +16,8 @@ const PixelFont = localFont({
 
 //Metadata
 export const metadata: Metadata = {
-  title: "Raul Shaun",
-  description: "raul shaun official portfolio",
+  title: "Peter Shaun",
+  description: "peter shaun official portfolio",
 };
 
 export default function RootLayout({
