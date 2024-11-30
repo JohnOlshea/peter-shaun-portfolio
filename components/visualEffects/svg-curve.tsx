@@ -5,7 +5,7 @@ export default function SvgCurve() {
   const path = useRef<SVGPathElement | null>(null);
 
   let progress = 0;
-  let reqId: number; // Specify the type for reqId
+  let reqId: number | null = null; // Specify the type for reqId
   let x = 0.5;
   let time = Math.PI / 2;
   const animateIn = () => {
@@ -32,7 +32,9 @@ export default function SvgCurve() {
   };
 
   const resetAnimation = () => {
-    cancelAnimationFrame(reqId);
+    if (reqId !== null) {
+      cancelAnimationFrame(reqId);
+    }
 
     animateOut();
   };
