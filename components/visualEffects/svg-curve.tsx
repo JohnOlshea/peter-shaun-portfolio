@@ -5,7 +5,7 @@ export default function SvgCurve() {
   const path = useRef<SVGPathElement | null>(null);
 
   let progress = 0;
-  let reqId: number | null = null; // Specify the type for reqId
+  let reqId: number; // Specify the type for reqId
   let x = 0.5;
   let time = Math.PI / 2;
   const animateIn = () => {
@@ -40,7 +40,7 @@ export default function SvgCurve() {
   const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
 
   const animateOut = () => {
-    let newProgress = progress * Math.sin(time);
+    const newProgress = progress * Math.sin(time);
 
     setPath(newProgress);
 
@@ -73,6 +73,7 @@ export default function SvgCurve() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [progress]);
 
   const setPath = (value: number) => {
